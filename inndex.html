@@ -6,6 +6,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.3/dist/flowbite.min.css" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -65,7 +66,7 @@
 
             </div>
 
-          <div class="flex lg:flex-row lg:space-x-6  lg:ml-0 absolute top-0 mt-2 ml-72 space-x-2 lg:relative lg:mt-0">
+          <div class="flex lg:flex-row lg:space-x-6  lg:ml-0 absolute top-0 mt-2 ml-60 space-x-2 lg:relative lg:mt-0">
 
             <button class="inline-flex items-center  border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">
                 <svg width="22" height="20" xmlns="http://www.w3.org/2000/svg"><path d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z" fill="#69707D" fill-rule="nonzero"/></svg>
@@ -80,9 +81,9 @@
       </header>
     
 
-<section class="bg-blac w-3/4 mx-auto mt-14">
+<section class="bg-blac w-3/4 mx-auto lg:mt-14 lg:p-0 mt-6">
    
-  <div class="lg:flex lg:flex-row space-x-40 ">
+  <div class="flex lg:flex-row lg:space-x-40  flex-col space-y-8 pb-6">
 
     <div class="space-y-4 lg:block hidden">
         <div class="">
@@ -106,12 +107,12 @@
               <img src="images\image-product-4-thumbnail.jpg" alt="" class="w-20 rounded-lg active:border-4 active:border-orange hover:cursor-pointer active:opacity-80">
            </div>
         </div>
+
      </div>
 
 
-
-  <!--MOBILE CAROUSEL CAROUSEL-->   
-<div id="controls-carousel" class="relative" data-carousel="static">
+       <!--MOBILE CAROUSEL CAROUSEL-->   
+<div id="controls-carousel" class="relative lg:hidden" data-carousel="static">
     <!-- Carousel wrapper -->
     <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
          <!-- Item 1 -->
@@ -124,15 +125,15 @@
         </div>
         <!-- Item 3 -->
         <div class="duration-700 ease-in-out absolute inset-0 transition-all transform translate-x-full z-10" data-carousel-item="">
-            <img src="/docs/images/carousel/carousel-3.svg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+            <img src="images\image-product-2-thumbnail.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
         </div>
         <!-- Item 4 -->
         <div class="hidden duration-700 ease-in-out absolute inset-0 transition-all transform" data-carousel-item="">
-            <img src="/docs/images/carousel/carousel-4.svg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+            <img src="images\image-product-3-thumbnail.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
         </div>
         <!-- Item 5 -->
         <div class="hidden duration-700 ease-in-out absolute inset-0 transition-all transform" data-carousel-item="">
-            <img src="/docs/images/carousel/carousel-5.svg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+            <img src="images\image-product-4-thumbnail.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
         </div>
     </div>
     <!-- Slider controls -->
@@ -152,6 +153,8 @@
 
 
 
+  
+
 
 
 
@@ -162,8 +165,8 @@
        </div>
 
        <div class="">
-        <p class="mt-6">These low-profile sneakers are your perfect casual wear <br> companion. Featuring a 
-            durable rubber outer sole, they’ll <br> withstand everything the weather can offer.
+        <p class="mt-6 text-md">These low-profile sneakers are your perfect <br class="lg:hidden"> casual wear <br class="hidden lg:block"> companion. Featuring a 
+            durable <br class="lg:hidden"> rubber outer sole, they’ll <br class="hidden lg:block"> withstand everything <br class="lg:hidden"> the weather can offer.
           </p>
        </div>
     
@@ -179,31 +182,37 @@
    </div>
 
 
-   <div class="flex flex-row space-x-6 ">
+   <div class="flex lg:flex-row lg:space-x-6 flex-col">
     
-    <div class="bg-paleorange flex flex-row  space-x-8 rounded-md px-8 mt-6">
-        <button class="">
+    <div class="bg-paleorange flex flex-row  space-x-8 rounded-md lg:px-8 mt-6 py-3 lg:py-0">
+        <button class="flex-initial  ml-6">
         <svg width="12" height="4" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path d="M11.357 3.332A.641.641 0 0 0 12 2.69V.643A.641.641 0 0 0 11.357 0H.643A.641.641 0 0 0 0 .643v2.046c0 .357.287.643.643.643h10.714Z" id="a"/></defs><use fill="#FF7E1B" fill-rule="nonzero" xlink:href="#a"/></svg>
       </button>
 
 
-       <h2 class="mt-1">0</h2>
+       <h2 class="lg:mt-1 flex-1   text-center w-">0</h2>
 
-       <button class="">
+       <button class="mr-6">
         <svg width="12" height="12" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path d="M12 7.023V4.977a.641.641 0 0 0-.643-.643h-3.69V.643A.641.641 0 0 0 7.022 0H4.977a.641.641 0 0 0-.643.643v3.69H.643A.641.641 0 0 0 0 4.978v2.046c0 .356.287.643.643.643h3.69v3.691c0 .356.288.643.644.643h2.046a.641.641 0 0 0 .643-.643v-3.69h3.691A.641.641 0 0 0 12 7.022Z" id="b"/></defs><use fill="#FF7E1B" fill-rule="nonzero" xlink:href="#b"/></svg>
        </button>
     </div>
 
 
 
-    <div class="flex flex-row border bg-orange px-8 py-2 rounded text-white space-x-2 font-kumbh font-bold mt-6 active:opacity-60">
-        <div>
+    <div class="flex flex-row border bg-orange px-8 lg:py-2 rounded text-white lg:space-x-2 font-kumbh font-bold mt-6 active:opacity-60 py-4">
+        <div class="mx-auto flex flex-row space-x-2">
+           
             <svg width="22" height="20" xmlns="http://www.w3.org/2000/svg"><path d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z" fill="#69707D" fill-rule="nonzero"/></svg>
+           
+
+            <button class="">
+                <h2>Add to cart</h2>
+            </button>
+
         </div>
 
-        <button>
-            <h2>Add to cart</h2>
-        </button>
+        
+       
     </div>
 
 
@@ -231,5 +240,5 @@
 </section>
 
 
-
+<script src="https://unpkg.com/flowbite@1.5.3/dist/flowbite.js"></script>
 </body>

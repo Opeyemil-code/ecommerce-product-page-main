@@ -57,7 +57,12 @@
         <span class="lg:ml-12 font-kumbh font-bold lg:text-3xl visible  text-4xl ml-6">sneakers</span>
           </a>
           
-            <nav class="md:ml-auto md:mr-auto lg:flex flex-col flex-wrap lg:items-center lg:text-base justify-center lg:flex-row bg-white w-60 p-16 pb-96 absolute font-bold text-lg lg:p-0 lg:pb-0 lg:relative lg:w-1/2 lg:font-normal lg:bg-transparent shadow-2xl lg:shadow-none hidde lg:visible rounded-lg space-y-4 flex h-full shadow-blackrgba hidden z-50 navbar">
+            <nav class="md:ml-auto md:mr-auto lg:flex flex-col flex-wrap lg:items-center lg:text-base justify-center lg:flex-row bg-white w-60 p-12 pb-96 absolute font-bold text-lg lg:p-0 lg:pb-0 lg:relative lg:w-1/2 lg:font-normal lg:bg-transparent shadow-2xl lg:shadow-none hidde lg:visible rounded-lg space-y-4 flex  shadow-blackrgba hidden z-50"  id="navbar">
+
+              <div class="absolute top-2 text-2xl">
+                <button class="close-modal text-4xl lg:hidden" id="cancel">&times;</button>
+              </div>
+
                 <a class="mr-5 hover:border-b-4 hover:border-b-orange hover:text-black hover:font-bold text-black lg:mt-4">Collections</a>
                 <a class="mr-5 hover:border-b-4 hover:border-b-orange hover:text-black hover:font-bold text-black">Men</a>
                 <a class="mr-5 hover:border-b-4 hover:border-b-orange hover:text-black hover:font-bold text-black">Women</a>
@@ -257,12 +262,12 @@
 
 
 <!--CART MODAL WINDOW-->
-  <main class="w-11/12 top-28  bg-white shadow-blackrgba shadow-xl rounded-lg  left-4 absolute pb-14 z-50 mx-auto lg:hidden hidden cartmodal">
+  <main class="absolute lg:right-60 lg:p-4 lg:top-20 bg-white shadow-blackrgba shadow-xl rounded-lg z-50 p-2 top-28 ml-4 hidden" id="cartmodal">
 
   <div class="w-11/12 mx-auto">
     <h2 class="border-b-2 font-bold text-xl font-kumbh ml">Cart</h2>
   </div>
-
+ 
   <div class="flex flex-col space-y-6  mx-auto">
  
 
@@ -308,7 +313,7 @@ style=" fill:#000000;"><path d="M 10 2 L 9 3 L 3 3 L 3 5 L 4.109375 5 L 5.892578
 
 
 <!--OVELAY DIV-->
-<div class="absolute w-full h-full top-0 left-0 bg-blackrgba overlay hidden z-10 lg:hidden backdrop-blur-sm"></div>
+<div class="absolute w-full h-full top-0 left-0 bg-blackrgba  hidden  lg:hidden backdrop-blur-sm z-20" id="overlay"></div>
 
 <script src="https://unpkg.com/flowbite@1.5.3/dist/flowbite.js"></script>
 

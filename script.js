@@ -1,6 +1,6 @@
 'use strict';
 const mobileMenu = document.getElementById("mobilemenu");
-const orderNumber = document.querySelectorAll('.cartnumber')
+const orderNumber = document.getElementsByClassName('cartnumber')
 const cartMessages = document.getElementById("cartmodal")
 const navMenu = document.getElementById("navbar")
 const overlay = document.getElementById("overlay")
@@ -28,21 +28,19 @@ cancelBtn.addEventListener(
     'click', Mobilemenu
 )
 
-/*let count = 0
+
+
 
 function handler(params) {
     for (let i = 0; i < orderNumber.length; i++) {
-        count++
-        document.querySelectorAll('.cartnumber')[i] = count
-        
+        document.getElementsByClassName('cartnumber')[i].value++ 
+        console.log(i)
     }
+    
 }
-
 
 addItem.addEventListener(
     'click', handler
 )
-*/
 
-
-
+console.log(document.getElementsByClassName('cartnumber'))

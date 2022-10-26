@@ -34,18 +34,17 @@ cancelBtn.addEventListener("click", Mobilemenu);
 
 addItem.addEventListener("click", handler);
 
-/*let count = 0
+
+
 
 function handler(params) {
     for (let i = 0; i < orderNumber.length; i++) {
-        count++
-        document.querySelectorAll('.cartnumber')[i] = count
-        
+        document.getElementsByClassName('cartnumber')[i].value++ 
+        console.log(i)
     }
+    
 }
-
 
 addItem.addEventListener(
     'click', handler
 )
-*/

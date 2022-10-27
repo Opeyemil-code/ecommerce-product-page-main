@@ -45,6 +45,8 @@ cancelBtn.addEventListener("click", Mobilemenu);
 addItem.addEventListener("click", handler);
 
 cartIcon.addEventListener('click', cart)
+
+cartIcon.addEventListener
     
 
 

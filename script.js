@@ -25,7 +25,13 @@ function handler(params) {
   b.innerHTML++;
   c.innerHTML++;
 
-  console.log(typeof orderNumber)
+  
+}
+
+
+
+function cart(params) {
+    cartMessages.classList.toggle('hidden')
 }
 
 // orderNumber[].innerHTML = 5;
@@ -38,17 +44,13 @@ cancelBtn.addEventListener("click", Mobilemenu);
 
 addItem.addEventListener("click", handler);
 
-
-
-
-/*function handler(params) {
-    for (let i = 0; i < orderNumber.length; i++) {
-        document.getElementsByClassName('cartnumber')[i].value++ 
-        console.log(i)
-    }
+cartIcon.addEventListener('click', cart)
     
-}*/
 
-addItem.addEventListener(
-    'click', handler
-)
+
+
+
+
+
+
+

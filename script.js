@@ -7,7 +7,12 @@ const navMenu = document.getElementById("navbar");
 const overlay = document.getElementById("overlay");
 const cancelBtn = document.getElementById("cancel");
 const cartIcon = document.getElementById("cart");
-const cartDiv = document.getElementById("cartdiv")
+const cartDiv = document.getElementById("cartdiv");
+const modal = document.getElementById("modal");
+const delBtn = document.getElementById("delete");
+const emptyCartMsg = document.getElementById("emptymessage");
+const checkOutBtn = document.getElementById("checkout");
+const addToCart = document.getElementById("addtocart")
 
 //for icons
 const substractItem = document.getElementById("substract");
@@ -19,21 +24,27 @@ function Mobilemenu(params) {
   overlay.classList.toggle("hidden");
 }
 
+
+//FUNCTIONALITY FOR ADDING COUNT
+let count = 0
 function handlerAdd(params) {
   let [a, b, c] = orderNumber;
 
-  a.innerHTML++;
-  b.innerHTML++;
-  c.innerHTML++;
+ count++
+ a.innerHTML = count;
+ b.innerHTML = count;
+ c.innerHTML = count;
+   
   
 }
 
-
+//FUNCTINAITY FOR SUBSTRCACTING COUNT
 function handlerSubstract(params) {
     let [a ,b ,c] = orderNumber
-    a.innerHTML--
-    b.innerHTML--
-    c.innerHTML--
+   count--
+   a.innerHTML = count;
+   b.innerHTML = count;
+   c.innerHTML = count;
    
 }
 
@@ -45,12 +56,33 @@ function cart(params) {
 
 
 function cartHandle(params) {
-      if (orderNumber > 0) {
-        cartDiv.classList.remove('hidden')
+    if (count > 0) {
+        cartDiv.classList.remove('hidden');
+        modal.classList.remove("hidden")
+        emptyCartMsg.classList.add("hidden")
+        checkOutBtn.classList.remove("hidden")
       }
-      return;
+      else if (count < 0) {
+        modal.classList.add('hidden')
+        checkOutBtn.classList.add("hidden")
+      }
+      
 }
 
+//FUNCTIONALITY /ICON TO DELETE WHAT IS IN CART
+
+function deleteitem(params) {
+    count = 0
+    document.getElementsByClassName("cartnumber").textContent = count;
+    modal.classList.add("hidden")
+    emptyCartMsg.classList.remove("hidden")
+    checkOutBtn.classList.add("hidden")
+}
+
+
+function addCart(params) {
+    cartMessages.classList.toggle("hidden")
+}
 
 
 
@@ -66,15 +98,14 @@ addItem.addEventListener("click", handlerAdd);
 
 substractItem.addEventListener('click', handlerSubstract);
 
-
 cartIcon.addEventListener('click', cart)
 
-    
+ 
+addItem.addEventListener('click',cartHandle)
 
+delBtn.addEventListener('click', deleteitem)
 
-
-
-
+addToCart.addEventListener('click', addCart)
 
 
 

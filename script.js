@@ -12,7 +12,9 @@ const modal = document.getElementById("modal");
 const delBtn = document.getElementById("delete");
 const emptyCartMsg = document.getElementById("emptymessage");
 const checkOutBtn = document.getElementById("checkout");
-const addToCart = document.getElementById("addtocart")
+const addToCart = document.getElementById("addtocart");
+const price = document.getElementById("price");
+const total = document.getElementById("total")
 
 //for icons
 const substractItem = document.getElementById("substract");
@@ -55,6 +57,8 @@ function cart(params) {
 }
 
 
+
+
 function cartHandle(params) {
     if (count > 0) {
         cartDiv.classList.remove('hidden');
@@ -65,6 +69,8 @@ function cartHandle(params) {
       else if (count < 0) {
         modal.classList.add('hidden')
         checkOutBtn.classList.add("hidden")
+
+
       }
       
 }

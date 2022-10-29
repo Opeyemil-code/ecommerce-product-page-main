@@ -24,6 +24,7 @@ const addItem = document.getElementById("add");
 function Mobilemenu(params) {
   navMenu.classList.toggle("hidden");
   overlay.classList.toggle("hidden");
+  cartMessages.classList.add('hidden')
 }
 
 

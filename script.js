@@ -28,7 +28,9 @@ const cancelBtn = document.getElementById("cancel");
 function Mobilemenu(params) {
   navMenu.classList.toggle("hidden");
   overlay.classList.toggle("hidden");
-  cartMessages.classList.add('hidden')
+  cartMessages.classList.add('hidden');
+  controlCarousel.classList.remove('visible')
+    controlCarousel.classList.add('lg:hidden')
 }
 
 console.log(orderNumber)
@@ -124,12 +126,32 @@ delBtn.addEventListener('click', deleteitem)
 addToCart.addEventListener('click', addCart)
 
 
+const controlCarousel = document.getElementById('controls-carousel');
+const lgDiv = document.getElementById('lgscreendiv')
 
-const imageBtn = document.getElementById('image-click')
+const imageBtn = document.querySelectorAll('.image-click')
+for (let i = 0; i < imageBtn.length; i++) {
+  function showCarousel(params) {
+    overlay.classList.remove('hidden'); 
+    controlCarousel.classList.remove('hidden');
+    controlCarousel.classList.add('visible');
+    controlCarousel.classList.remove('lg:hidden');
+    
+ }
 
-function overlayLgScreen(params) {
-     overlay.classList.remove('hidden');
-     
+
+ imageBtn[i].addEventListener('click',showCarousel ) 
 }
 
-imageBtn.addEventListener('click', overlayLgScreen)
+
+
+console.log(imageBtn[i])
+
+
+/*function closeOverlay(params) {
+   
+}
+
+overlay.addEventListener('click', closeOverlay) */
+
+

@@ -32,6 +32,9 @@ function Mobilemenu(params) {
   controlCarousel.classList.remove('visible')
     controlCarousel.classList.add('lg:hidden')
 }
+mobileMenu.addEventListener("click", Mobilemenu);
+overlay.addEventListener("click", Mobilemenu);
+cancelBtn.addEventListener("click", Mobilemenu);
 
 console.log(orderNumber)
 
@@ -44,9 +47,9 @@ function handlerAdd(params) {
  a.innerHTML = count;
  b.innerHTML = count;
  c.innerHTML = count;
-   
-  
+     
 }
+addItem.addEventListener("click", handlerAdd);
 
 //FUNCTINAITY FOR SUBSTRCACTING COUNT three element with same id
 function handlerSubstract(params) {
@@ -54,16 +57,16 @@ function handlerSubstract(params) {
    count--
    a.innerHTML = count;
    b.innerHTML = count;
-   c.innerHTML = count;
-   
+   c.innerHTML = count;  
 }
+substractItem.addEventListener('click', handlerSubstract);
 
 
 
 function cart(params) {
     cartMessages.classList.toggle('hidden')
 }
-
+cartIcon.addEventListener('click', cart)
 
 
 
@@ -83,9 +86,9 @@ function cartHandle(params) {
         checkOutBtn.classList.add("hidden")
         Number(total.innerHTML) = price.value * orderNumber;
         //total.innerHTML = price.value * orderNumber;
+}      
 }
-      
-}
+addItem.addEventListener('click',cartHandle)
 
 //FUNCTIONALITY /ICON TO DELETE WHAT IS IN CART
 
@@ -96,37 +99,40 @@ function deleteitem(params) {
     emptyCartMsg.classList.remove("hidden")
     checkOutBtn.classList.add("hidden")
 }
+delBtn.addEventListener('click', deleteitem)
+
 
 
 function addCart(params) {
     cartMessages.classList.toggle("hidden")
 }
 
+addToCart.addEventListener('click', addCart)
 
 
 // orderNumber[].innerHTML = 5;
 
-mobileMenu.addEventListener("click", Mobilemenu);
 
-overlay.addEventListener("click", Mobilemenu);
 
-cancelBtn.addEventListener("click", Mobilemenu);
 
-addItem.addEventListener("click", handlerAdd);
 
-substractItem.addEventListener('click', handlerSubstract);
 
-cartIcon.addEventListener('click', cart)
+
+
+
+
+
+
 
  
-addItem.addEventListener('click',cartHandle)
-
-delBtn.addEventListener('click', deleteitem)
-
-addToCart.addEventListener('click', addCart)
 
 
-const controlCarousel = document.getElementById('controls-carousel');
+
+
+
+
+
+/*const controlCarousel = document.getElementById('controls-carousel');
 const lgDiv = document.getElementById('lgscreendiv')
 
 const imageBtn = document.querySelectorAll('.image-click')
@@ -145,13 +151,8 @@ for (let i = 0; i < imageBtn.length; i++) {
 
 
 
-console.log(imageBtn[i])
+console.log(imageBtn[i]) */
 
 
-/*function closeOverlay(params) {
-   
-}
-
-overlay.addEventListener('click', closeOverlay) */
 
 

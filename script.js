@@ -85,7 +85,7 @@ function cartHandle(params) {
       else if (count < 0) {
         modal.classList.add('hidden')
         checkOutBtn.classList.add("hidden")
-        Number(total.innerHTML) = price.value * orderNumber;
+        //Number(total.innerHTML) = price.value * orderNumber;
         //total.innerHTML = price.value * orderNumber;
 }      
 }

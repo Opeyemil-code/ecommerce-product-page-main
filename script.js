@@ -116,22 +116,6 @@ addToCart.addEventListener('click', addCart)
 
 
 
-
-
-
-
-
-
-
-
- 
-
-
-
-
-
-
-
 /*const controlCarousel = document.getElementById('controls-carousel');
 const lgDiv = document.getElementById('lgscreendiv')
 

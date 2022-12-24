@@ -1,5 +1,6 @@
 
 "use strict";
+
 const mobileMenu = document.getElementById("mobilemenu");
 const navMenu = document.getElementById("navbar");
 const overlay = document.getElementById("overlay");
@@ -78,7 +79,7 @@ function cartHandle(params) {
         modal.classList.remove("hidden")
         emptyCartMsg.classList.add("hidden")
         checkOutBtn.classList.remove("hidden")
-        Number(total.innerHTML) = price.value * orderNumber;
+       // Number(total.innerHTML) = price.value * orderNumber;
         //total.innerHTML = price.value * orderNumber;
       }
       else if (count < 0) {

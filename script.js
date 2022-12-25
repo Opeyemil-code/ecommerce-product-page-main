@@ -117,7 +117,7 @@ addToCart.addEventListener('click', addCart)
 
 
 
-/*const controlCarousel = document.getElementById('controls-carousel');
+const controlCarousel = document.getElementById('controls-carousel');
 const lgDiv = document.getElementById('lgscreendiv')
 
 const imageBtn = document.querySelectorAll('.image-click')
@@ -136,7 +136,7 @@ for (let i = 0; i < imageBtn.length; i++) {
 
 
 
-console.log(imageBtn[i]) */
+console.log(imageBtn[i]) 
 
 
 

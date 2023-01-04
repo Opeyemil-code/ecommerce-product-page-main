@@ -56,6 +56,7 @@ addItem.addEventListener("click", handlerAdd);
 function handlerSubstract(params) {
     let [a ,b ,c] = orderNumber
    count--
+   count = Math.max(count,0)
    a.innerHTML = count;
    b.innerHTML = count;
    c.innerHTML = count;  
